@@ -5,12 +5,11 @@ class PostsController < ApplicationController
       @posts = Author.find(params[:author_id]).posts
     else
       @posts = Post.all
-    end 
+    end
   end
 
   def show
     @post = Post.find(params[:id])
-    @post.author
   end
 
   def new
